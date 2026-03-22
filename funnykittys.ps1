@@ -7,7 +7,6 @@ $date = $data.date
 $todaysDate = Get-Date -Format MM/dd/yyyy
 # find what kitty to print based on array index
 $kitty = [int] $data.kitty
-$amountOfKittys = 0
 # the table of kittys
 $kittys = @(
 @"
@@ -30,11 +29,7 @@ $kittys = @(
 "@
 )
 
-# count how many kittys in the table
-foreach ($cat in $kittys)
-{
-    $amountOfKittys += 1
-}
+$amountOfKittys = $kittys.Count
 # if no cat(s), then print message and exit script
 if ($amountOfKittys -eq 0) 
 {
