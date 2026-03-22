@@ -50,10 +50,7 @@ if ($todaysDate -ne $date)
     $data.kitty = $kitty
 
     $data | ConvertTo-Json | Set-Content $dataFile
-    write-host $kittys[$kitty]
 } 
-# else, just print the kitty
-else 
-{
-    write-host $kittys[$kitty]
-}
+
+#print kitty 
+write-host $kittys[$kitty]
