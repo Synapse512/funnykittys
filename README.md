@@ -4,7 +4,7 @@ i made this in about 30 minutes when i should have been doing my homework
 
 ## setup:  
 1: download the folder including the `funnykittys.ps1` and `data.json` file  
-2: copy the path of `funnykittys.ps1`
+2: copy the path of `funnykittys.ps1`  
 3: open your powershell profile script, or create one if you dont have one    
 4: paste the path to `funnykittys.ps1` into the powershell profile, and save  
 5: now it works yay
