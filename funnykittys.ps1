@@ -5,10 +5,10 @@ $date = $data.date
 
 # get current date
 $todaysDate = Get-Date -Format MM/dd/yyyy
-# find what kitty to print based on array index
-$kitty = [int] $data.kitty
-# the table of kittys
-$kittys = @(
+# find what cat to print based on array index
+$cat = [int] $data.cat
+# the table of cats
+$cats = @(
 @"
       へ  
   ૮ O o)   
@@ -29,23 +29,23 @@ $kittys = @(
 "@
 )
 
-$amountOfKittys = $kittys.Count
+$amountofCats = $cats.Count
 # if no cat(s), then print message and exit script
-if ($amountOfKittys -eq 0) 
+if ($amountofCats -eq 0) 
 {
-    write-host "no kitty :("
+    write-host "no cat :("
     exit 1
 }
 
-# if todays date is NOT the last recorded date, update new kitty index and date
+# if todays date is NOT the last recorded date, update new cat index and date
 if ($todaysDate -ne $date)
 {
     $data.date = $todaysDate
-    $kitty = Get-Random -Minimum 0 -Maximum $amountOfKittys
-    $data.kitty = $kitty
+    $cat = Get-Random -Minimum 0 -Maximum $amountofCats
+    $data.cat = $cat
 
     $data | ConvertTo-Json | Set-Content $dataFile
 } 
 
-#print kitty 
-write-host $kittys[$kitty]
+#print cat 
+write-host $cats[$cat]
