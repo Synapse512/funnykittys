@@ -21,5 +21,5 @@ windows blocks powershell scripts automatically, you have to allow them first
 fix: run powershell as Administrator, and run `set-executionpolicy remotesigned`
 
 ### issue: i dont like the cats they look dumb
-fix: open `funnykittys.ps1`, and paste your custom kitty into the the table called `$kittys`  
+fix: open `funnykittys.ps1`, and paste your custom kitty into the the table called `$cats`  
 (make sure you surround it by @" "@)
